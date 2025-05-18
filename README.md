@@ -114,7 +114,7 @@ chefia_project/
 python src/main.py
 
 
-Potencial e Futuro
+**Potencial e Futuro**
 
 O ChefIA é mais do que um script; é uma prova do poder da IA multi-agente na resolução de problemas cotidianos. Seu potencial de expansão é vasto, podendo incluir funcionalidades como:
 
