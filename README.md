@@ -114,7 +114,7 @@ chefia_project/
 python src/main.py
 
 
-**Potencial e Futuro**
+# Potencial e Futuro
 
 O ChefIA é mais do que um script; é uma prova do poder da IA multi-agente na resolução de problemas cotidianos. Seu potencial de expansão é vasto, podendo incluir funcionalidades como:
 
@@ -123,9 +123,8 @@ O ChefIA é mais do que um script; é uma prova do poder da IA multi-agente na r
     Conexão com APIs de supermercados para verificar disponibilidade de estoque e preços em tempo real.
     Personalização de dietas e restrições alimentares avançadas.
 
-Estamos apenas começando a desvendar o que o ChefIA pode fazer!
-Contato
 
+## Contato:
 Autor: Felipe Scherer da Silva
 
 GitHub: https://github.com/fscherers
