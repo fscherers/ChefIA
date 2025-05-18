@@ -4,7 +4,7 @@
 
 ## Introdução
 
-Em um mundo onde o ritmo de vida é cada vez mais acelerado, planejar refeições deliciosas e eficientes pode ser um desafio. O projeto **ChefIA** surge para revolucionar a sua cozinha, atuando como um assistente de IA multi-agente projetado para otimizar todo o processo culinário, desde a análise dos ingredientes que você já tem em casa até a sugestão de roteiros de compra e o passo a passo do preparo.
+Planejar refeições deliciosas e eficientes pode ser um desafio. O projeto **ChefIA** surge para te auxiliar na cozinha, atuando como um assistente de IA multi-agente projetado para otimizar todo o processo culinário, desde a análise dos ingredientes que você já tem em casa até a sugestão de roteiros de compra (se você quiser) e o passo a passo do preparo.
 
 Utilizando o poder da **Google Agent Development Kit (ADK)** e o modelo **Gemini** da Google, o ChefIA orquestra múltiplos agentes inteligentes que trabalham em conjunto para oferecer uma experiência personalizada e sem estresse, garantindo que você aproveite ao máximo seu tempo e seus recursos.
 
@@ -47,72 +47,91 @@ O ChefIA é construído com um sistema multi-agente robusto, onde cada agente po
 
 chefia_project/
 
-├── .env                # Variáveis de ambiente (sua API Key vai aqui)
+    ├── .env                    # Variáveis de ambiente (sua API Key vai aqui)
 
-├── .gitignore          # Arquivos e pastas a serem ignorados pelo Git
+    ├── .gitignore              # Arquivos e pastas a serem ignorados pelo Git
 
-├── README.md           # Este arquivo
+    ├── README.md               # Este arquivo
 
-├── requirements.txt    # Dependências do Python
+    ├── requirements.txt        # Dependências do Python
 
-└── src/
+    ├── chefia_colab.ipynb      # Notebook do Google Colab para execução direta
 
-    ├── init.py         # Torna 'src' um pacote Python
+    └── src/
 
-    ├── main.py         # O fluxo principal de execução do ChefIA
+        ├── init.py         # Torna 'src' um pacote Python
 
-    ├── agents.py       # Definições dos agentes inteligentes
+        ├── main.py         # O fluxo principal de execução do ChefIA
 
-    └── utils.py        # Funções auxiliares (chamar agente, formatação de texto)
+        ├── agents.py       # Definições dos agentes inteligentes
 
+        └── utils.py        # Funções auxiliares (chamar agente, formatação de texto)
+
+
+---
 
 ## Como Rodar
 
+Você tem duas opções para executar o ChefIA: diretamente via terminal ou pelo Google Colab.
 
 ### 1. Pré-requisitos
 
-
 * Python 3.8+
-
 * Git
-
 * Uma API Key do Google Gemini (você pode obtê-la no [Google AI Studio](https://aistudio.google.com/))
-
 * Uma API Key do Google Search (para as ferramentas de busca).
 
-
-### 2. Configuração do Ambiente
-
+### 2. Configuração do Ambiente (para execução local)
 
 1.  **Clone o repositório:**
 
-
+    ```bash
+    git clone [https://github.com/fscherers/ChefIA.git](https://github.com/fscherers/ChefIA.git)
+    cd ChefIA
+    ```
 
 2.  **Crie e ative um ambiente virtual (recomendado):**
 
-
+    ```bash
+    python -m venv venv
+    # No Windows:
+    # venv\Scripts\activate
+    # No macOS/Linux:
+    source venv/bin/activate
+    ```
 
 3.  **Instale as dependências:**
 
-
-
-4.  **Configure sua API Key:**
-
-    Crie um arquivo chamado `.env` na raiz do projeto (`chefia_project/`) e adicione sua chave de API:
-
+    ```bash
+    pip install -r requirements.txt
     ```
 
-    GOOGLE_API_KEY=SUA_CHAVE_DE_API_AQUI
+4.  **Configure suas API Keys:**
 
+    Crie um arquivo chamado `.env` na raiz do projeto (`chefia_project/`) e adicione suas chaves de API:
+
+    ```ini
+    GOOGLE_API_KEY=SUA_CHAVE_DE_API_DO_GEMINI_AQUI
     ```
 
-    **ATENÇÃO:** Nunca publique este arquivo `.env` 
+    **ATENÇÃO:** Nunca publique este arquivo `.env` ou suas chaves de API publicamente! O `.gitignore` já está configurado para ignorá-lo.
 
+### 3. Executando o ChefIA Localmente
 
-### 3. Executando o ChefIA
+Após a configuração, execute o script principal:
 
+```bash
 python src/main.py
+```
 
+
+### 4. Executando o ChefIA no Google Colab
+
+Para uma experiência mais rápida e sem necessidade de configuração local, você pode usar o notebook do Google Colab:
+
+    Abra o Notebook: Clique no arquivo Colab_ChefIA.ipynb no repositório GitHub e selecione "Open in Colab" (Abrir no Colab).
+    Configure suas API Keys: No Colab, você precisará adicionar suas chaves de API como variáveis de ambiente (geralmente na primeira célula, utilizando os.environ ou diretamente na interface do Colab, se preferir).
+    Execute as Células: Simplesmente execute as células do notebook sequencialmente. O ambiente já estará configurado e as dependências serão instaladas automaticamente.
 
 # Potencial e Futuro
 
@@ -131,4 +150,4 @@ GitHub: https://github.com/fscherers
 
 LinkedIn: https://www.linkedin.com/in/felipe-scherer/
 
-© 2024 Projeto ChefIA. Desenvolvido para simplificar sua vida na cozinha.
+© 2025 Projeto ChefIA. Desenvolvido para simplificar sua vida na cozinha.
